@@ -21,6 +21,8 @@ look up how to pipe this output to other processes.
 the -m option will simply take in a string, encode it in to a message inside the image.
 '''
 
+#I will need to understand how numpy handles image arrays so that I can generate this dynamically with the appropriate dimensions
+
 import base64
 import math
 import numpy
@@ -39,6 +41,16 @@ def encodemessage(message):
     encodedstring=""
     encodedstring=b64encode(message)
     return encodedstring
+
+def encrypt(inputstring):
+    #this takes in the unmolested b64 string and encrypts it, adding the start and end bytes to it
+    return inputstring #does nothing yet
+
+def decrypt(inputstring):
+    #first strips the first and last bytes off, then decrypts
+    return inputstring #does nothing yet
+
+
 
 
 
